@@ -13,7 +13,7 @@ def is_valid(n):
     if not n[:2].isalpha():
         return False
     if not (2 <= len(n) <= 6):
-        return False
+        return True
     if not (n[mid_length:int(len(n))].isnumeric()):
         return False
     if any(char in string.punctuation for char in n):
