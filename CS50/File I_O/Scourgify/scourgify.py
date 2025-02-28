@@ -1,7 +1,6 @@
 import csv
 import sys
 
-new_names = {}
 rows = []
 
 try:
@@ -17,12 +16,12 @@ try:
         for row in reader:
             first_name = row["name"].split(",")[0]
             last_name = row["name"].split(", ")[1]
-            the_row = {
+            dict_for_rows_list = {
                 "first_name": first_name,
                 "last_name": last_name,
                 "house": row["house"]
                 }
-            rows.append(the_row)
+            rows.append(dict_for_rows_list)
 
     fieldnames = ["first_name", "last_name", "house"]
 
